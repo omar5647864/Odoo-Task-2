@@ -1,0 +1,16 @@
+<odoo>
+  <data>
+  <record id="bac_stock_picking_form" model="ir.ui.view">
+    <field name="name">bac.stock.picking.form</field>
+    <field name="model">stock.picking</field>
+    <field name="inherit_id" ref="stock.view_picking_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="/form/sheet/notebook/page/field[@name='move_ids_without_package']/tree/field[@name='product_id']" position="after">
+        <field name="dimension1"/>
+        <field name="dimension" invisible="1"/>
+        <field name="trigger" invisible="1"/>
+      </xpath>
+    </field>
+    </record>
+       </data>
+</odoo>
